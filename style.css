@@ -944,15 +944,28 @@ Contact 部分
 
 .wechat-qr {
   width: 90px;
-  border-radius: 8px;
+  height: 90px;
+  border-radius: 6px;
   transition: all 0.3s cubic-bezier(0.28, 0.11, 0.32, 1);
   max-width: 100%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.wechat-qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .wechat-qr:hover {
   transform: scale(1.03);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wechat-qr:active {
+  transform: scale(0.98);
 }
 
 /* 
@@ -1130,6 +1143,14 @@ Footer 部分
   
   .contact-info {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .contact-form-container {
+    max-width: 100%;
+  }
+  
+  .wechat-section {
+    margin-bottom: 20px;
   }
 }
 
@@ -1519,6 +1540,204 @@ body.light-mode .lang-toggle span {
   }
 }
 
+/* 
+========================================
+苹果风格的新内容结构
+======================================== 
+*/
+
+/* 英雄/标题区域 */
+.hero-section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-subtitle {
+  font-size: 21px;
+  line-height: 1.381;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
+
+/* 分栏布局 */
+.content-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  position: relative;
+}
+
+/* 联系信息栏 */
+.contact-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.column-intro {
+  margin-bottom: 10px;
+}
+
+.column-intro h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -0.022em;
+  color: var(--text-primary);
+}
+
+.column-intro p {
+  font-size: 17px;
+  line-height: 1.47059;
+  letter-spacing: -0.022em;
+  color: var(--text-secondary);
+}
+
+.contact-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+
+.contact-action i {
+  font-size: 10px;
+  transition: transform 0.2s ease;
+}
+
+.contact-action:hover {
+  text-decoration: none;
+}
+
+.contact-action:hover i {
+  transform: translateX(2px);
+}
+
+/* 微信部分样式 */
+.wechat-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.28, 0.11, 0.32, 1);
+  border: none;
+  overflow: hidden;
+}
+
+.wechat-content {
+  display: flex;
+  gap: 16px;
+}
+
+.wechat-text h4 {
+  font-size: 17px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.022em;
+}
+
+.wechat-text p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  opacity: 0.9;
+}
+
+/* 表单栏 */
+.form-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-intro {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+  .content-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .hero-section {
+    margin-bottom: 40px;
+  }
+  
+  .wechat-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-columns {
+    gap: 30px;
+  }
+  
+  .section-subtitle {
+    font-size: 18px;
+  }
+  
+  .wechat-section {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .wechat-content {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .wechat-qr {
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    margin-bottom: 30px;
+  }
+  
+  .contact-column {
+    gap: 30px;
+  }
+  
+  .wechat-qr {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .contact-form-container {
+    padding: 25px 20px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+}
+
 .contact-form-container {
   width: 100%;
   max-width: 600px;
@@ -1526,6 +1745,7 @@ body.light-mode .lang-toggle span {
   padding: 40px;
   border-radius: 18px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
 .contact-form-container h3 {
@@ -1649,5 +1869,64 @@ body.light-mode .gradient-sphere-2 {
   }
   100% {
     transform: translate(5%, 5%);
+  }
+}
+
+/* 
+========================================
+苹果风格页脚增强样式
+======================================== 
+*/
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+.footer-branding {
+  flex: 1;
+  text-align: left;
+  max-width: 300px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: -0.022em;
+}
+
+.footer-tagline {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 0;
+  letter-spacing: -0.016em;
+  line-height: 1.4;
+}
+
+.footer-nav-column a {
+  transition: color 0.2s ease;
+}
+
+.footer-nav-column a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-branding {
+    max-width: 100%;
+  }
+  
+  .footer-nav {
+    flex-direction: column;
+    gap: 30px;
   }
 } 

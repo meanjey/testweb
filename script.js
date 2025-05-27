@@ -483,9 +483,6 @@ function initLanguageToggle() {
       
       // 保存语言偏好到本地存储
       localStorage.setItem('language', lang);
-      
-      // 应用翻译
-      applyTranslations(lang);
     });
   });
   
