@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 | 关于我</title>
+    <!-- Google Fonts - 现代字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 页面加载动画 -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <p>加载中...</p>
+    </div>
+
+    <!-- 暗色/亮色模式切换按钮 -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- 固定顶部导航栏 -->
+    <nav id="navbar">
+        <div class="nav-logo">个人<span>主页</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">首页</a></li>
+            <li><a href="about.html" class="nav-link active">关于我</a></li>
+            <li><a href="skills.html" class="nav-link">技能</a></li>
+            <li><a href="projects.html" class="nav-link">项目</a></li>
+            <li><a href="contact.html" class="nav-link">联系方式</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 粒子背景 -->
+        <div id="particles-js"></div>
+
+        <!-- About 板块 -->
+        <section id="about" class="section" data-aos="fade-up">
+            <h2 class="section-title">关于我</h2>
+            <div class="section-content">
+                <div class="about-container">
+                    <div class="profile-pic-container">
+                        <div class="profile-pic">
+                            <!-- 替换为你的照片 -->
+                            <img src="images/profile.jpg" alt="个人照片">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>我是谁？</h3>
+                        <p>我是一名充满热情的开发者，专注于AI、计算机视觉和数据可视化领域。我喜欢通过技术解决实际问题，同时不断学习新知识和技能。</p>
+                        
+                        <h3>我擅长什么？</h3>
+                        <p>我精通Python编程，熟悉Flask等Web框架，在图像处理方面掌握OpenCV和YOLOv8等先进技术。我热衷于将AI技术应用到交通工程领域，以提高交通安全和效率。</p>
+                        
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>大学生</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-code"></i>
+                                <span>程序员</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>AI爱好者</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 教育经历部分 -->
+                <div class="education-section">
+                    <h3 class="sub-section-title">教育经历</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>本科学位 - 交通工程</h4>
+                                <p class="timeline-date">2022 - 至今</p>
+                                <p>西华大学</p>
+                                <p>主修交通工程，辅修计算机科学。专注于智能交通系统和计算机视觉应用。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 兴趣爱好部分 -->
+                <div class="interests-section">
+                    <h3 class="sub-section-title">兴趣爱好</h3>
+                    <div class="interests-grid">
+                        <div class="interest-item">
+                            <i class="fas fa-code"></i>
+                            <p>编程</p>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-robot"></i>
+                            <p>人工智能</p>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-book"></i>
+                            <p>阅读</p>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-music"></i>
+                            <p>音乐</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 个人主页. 版权所有.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-weixin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 粒子动画库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 自定义脚本 -->
+    <script src="script.js"></script>
+</body>
+</html> 

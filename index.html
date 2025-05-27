@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 | 首页</title>
+    <!-- Google Fonts - 现代字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 页面加载动画 -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <p>加载中...</p>
+    </div>
+
+    <!-- 暗色/亮色模式切换按钮 -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
+    
+    <!-- 多语言切换按钮 -->
+    <div class="lang-toggle">
+        <span>中</span>
+        <div class="lang-dropdown">
+            <div class="lang-option active" data-lang="zh">
+                <span>中文</span>
+            </div>
+            <div class="lang-option" data-lang="en">
+                <span>English</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 固定顶部导航栏 -->
+    <nav id="navbar">
+        <div class="nav-logo">个人<span>主页</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link active">首页</a></li>
+            <li><a href="about.html" class="nav-link">关于我</a></li>
+            <li><a href="skills.html" class="nav-link">技能</a></li>
+            <li><a href="projects.html" class="nav-link">项目</a></li>
+            <li><a href="contact.html" class="nav-link">联系方式</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 粒子背景 -->
+        <div id="particles-js"></div>
+
+        <!-- Home 板块 -->
+        <section id="home" class="section">
+            <div class="section-content">
+                <div class="hero-text">
+                    <h1 class="title fade-in delay-1">你好，我是 <span class="highlight-text">刘明杰</span></h1>
+                    <div class="typing-container fade-in delay-2">
+                        <span id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="subtitle fade-in delay-3">欢迎来到我的个人网站</p>
+                    <div class="cta-buttons fade-in delay-4">
+                        <a href="projects.html" class="btn primary-btn">查看项目</a>
+                        <a href="contact.html" class="btn secondary-btn">联系我</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- 这里可以放置一个适合的图像或动画 -->
+                </div>
+            </div>
+            <a href="about.html" class="scroll-down-btn fade-in">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 个人主页. 版权所有.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-weixin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 粒子动画库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 多语言支持 -->
+    <script src="translations.js"></script>
+    <!-- 自定义脚本 -->
+    <script src="script.js"></script>
+</body>
+</html> 

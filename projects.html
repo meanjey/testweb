@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 | 项目</title>
+    <!-- Google Fonts - 现代字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 页面加载动画 -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+        <p>加载中...</p>
+    </div>
+
+    <!-- 暗色/亮色模式切换按钮 -->
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- 固定顶部导航栏 -->
+    <nav id="navbar">
+        <div class="nav-logo">个人<span>主页</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">首页</a></li>
+            <li><a href="about.html" class="nav-link">关于我</a></li>
+            <li><a href="skills.html" class="nav-link">技能</a></li>
+            <li><a href="projects.html" class="nav-link active">项目</a></li>
+            <li><a href="contact.html" class="nav-link">联系方式</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 粒子背景 -->
+        <div id="particles-js"></div>
+
+        <!-- Projects 板块 -->
+        <section id="projects" class="section" data-aos="fade-up">
+            <h2 class="section-title">我的项目</h2>
+            <div class="section-content">
+                <div class="projects-container">
+                    <!-- 项目卡片 1 -->
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-img">
+                            <img src="images/project1.png" alt="交通监控系统">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">智能交通监控系统</h3>
+                            <p class="project-description">基于计算机视觉的交通监控系统，可实时检测车辆、行人，并分析交通流量。使用YOLOv8进行目标检测，Flask构建Web界面。</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">YOLOv8</span>
+                                <span class="tech-tag">Flask</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 项目卡片 2 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-img">
+                            <img src="images/project2.png" alt="数据可视化平台">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">交通数据可视化平台</h3>
+                            <p class="project-description">交通数据分析与可视化平台，展示交通流量、事故热点、道路拥堵等数据。使用Echarts实现动态图表，支持多维度数据筛选。</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Echarts</span>
+                                <span class="tech-tag">HTML/CSS</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 项目卡片 3 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-img">
+                            <img src="images/project3.png" alt="个人博客系统">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">个人技术博客</h3>
+                            <p class="project-description">基于Flask构建的个人技术博客，支持Markdown编辑、代码高亮、评论系统等功能。记录学习笔记和技术心得。</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 项目卡片 4 -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-img">
+                            <img src="images/project4.png" alt="AI助手应用">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" target="_blank"><i class="fas fa-link"></i></a>
+                                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">交通AI助手</h3>
+                            <p class="project-description">基于大语言模型的交通领域智能助手，可回答交通规则、路线规划等问题，并提供实时交通状况查询。</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">Vue.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 更多项目按钮 -->
+                <div class="more-projects">
+                    <a href="https://github.com/" target="_blank" class="btn">查看更多项目</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 个人主页. 版权所有.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-weixin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 粒子动画库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 自定义脚本 -->
+    <script src="script.js"></script>
+</body>
+</html> 
